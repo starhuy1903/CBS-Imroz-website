@@ -200,6 +200,7 @@ img {
   text-align: left;
   padding: 12px 0;
   border-radius: 4px;
+  transition: all 0.4s;
 }
 
 .mainmenunav .mainmenu > li .submenu li a {
@@ -210,6 +211,16 @@ img {
   margin: 0 10px;
   border-radius: 3px;
   display: block;
+}
+
+.mainmenunav ul.mainmenu > li:hover > a {
+  color: var(--color-primary);
+}
+
+.mainmenunav ul.mainmenu > li:hover > ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  z-index: 90;
 }
 
 .header-right .header-btn {
@@ -243,4 +254,11 @@ a.btn-default.btn-border.btn-opacity,
 button.btn-default.btn-border.btn-opacity {
   border: 2px solid --color-opacity-1;
   color: var(--color-white);
+}
+
+a.btn-default.btn-border:hover,
+button.btn-default.btn-border:hover {
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
 }
